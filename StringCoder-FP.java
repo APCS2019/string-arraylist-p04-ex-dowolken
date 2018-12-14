@@ -6,10 +6,20 @@
      *  The method gives prefernce to return the longer matches.
      */
     private StringPart findPart(String str){
-        int length=0;
-        int n=0;
-        String s=str;
-        while(length!=str.length())
-            {n=Math.random()*s.length()-1;
-             length+=n.length();
-             s=s.substring(
+        int index=1;
+        if(str.length()<=5){
+            length=str.length();
+        while(index!=length)
+            {if(masterString.indexOf(str.substring(0,length-index))!=-1)
+               {return new StringPart(masterPart.indexOf(str.substring(0,length-index)),length-index);}
+             index++;
+            }
+        return null;
+            
+        if(str.length()<=5)
+            int n=str.length();
+        for(int m=n; m> 0:m--)
+           {if(masterString.indexOf(str.substring(0,m))!=-1) 
+               {return new StringPart(masterPart.indexOf(str.substring(0,m)),m);}
+           }
+        return null;
