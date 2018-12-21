@@ -15,7 +15,7 @@
              index++;
             }
         return null;
-            
+        /**another**/    
         if(str.length()<=5)
             int n=str.length();
         for(int m=n; m> 0:m--)
